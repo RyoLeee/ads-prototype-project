@@ -1,0 +1,27 @@
+{
+  "name": "central-ads-system",
+  "version": "1.0.0",
+  "description": "Mini Google Ads / Ad Network",
+  "scripts": {
+    "dev:ads":       "bun run src/ads-service/main.ts",
+    "dev:company":   "bun run src/company-service/main.ts",
+    "dev:payment":   "bun run src/payment-service/main.ts",
+    "dev:engine":    "bun run src/main-engine/main.ts",
+    "dev:gateway":   "bun run src/gateway/main.ts",
+    "dev:all":       "bun run scripts/start-all.ts",
+    "db:migrate":    "bun run src/db/migrate.ts",
+    "db:seed":       "bun run src/db/seed.ts",
+    "payment:topup": "bun run src/scripts/topup.ts"
+  },
+  "dependencies": {
+    "elysia": "^1.1.25",
+    "@elysiajs/jwt": "^1.1.1",
+    "@elysiajs/cors": "^1.1.1",
+    "drizzle-orm": "^0.36.4",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "drizzle-kit": "^0.28.1"
+  }
+}
